@@ -63,7 +63,7 @@ def logout(client):
 
 def add_message(client, text):
     """Records a message"""
-    rv = client.post('/add_message', data={'text': text},
+    rv = client.post('/add_message', data={'text for test': text},
                      follow_redirects=True)
     if text:
         assert b'Your message was recorded' in rv.data
